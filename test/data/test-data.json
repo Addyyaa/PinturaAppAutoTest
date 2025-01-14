@@ -1,0 +1,9 @@
+{
+    "login": {
+        "case1": {
+            "region": "CN",
+            "expect": "中国大陆(CN)",
+            "expect_en": "China(CN)"
+        }
+    }
+} 
