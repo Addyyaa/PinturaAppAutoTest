@@ -1,0 +1,5 @@
+{
+    "screenApi": {
+        "getScreenPics64": "/api/v1/screenPicture/page/list"
+    }
+}

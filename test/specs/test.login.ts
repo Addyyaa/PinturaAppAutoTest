@@ -2,7 +2,9 @@ import LoginPage from '../../pages/login.page';
 import HomePage from '../../pages/home.page';
 import MyProfilePage from '../../pages/myProfile.page';
 import NativePage from '../../pages/native.page';
+import { exec } from 'child_process';
 import * as testData from '../data/test-data.json' assert { type: 'json' };
+
 
 describe('登录模块测试', () => {
     let language: 'zh' | 'en';
@@ -76,6 +78,9 @@ describe('登录模块测试', () => {
             } else {
                 console.log('没有新的固件可以升级，跳过新手引导')
             }
+
+
+
             await HomePage.skipButton1zh.isExisting()
             await HomePage.skipButton1zh.click()
             // 进入我的界面，执行退出登录操作
@@ -209,6 +214,26 @@ describe('登录模块测试', () => {
                 expect(true).toBe(false)
             }
         })
+
+        // it.only('调试', async () => {
+        //     // 启动中间人拦截
+        //     const mitmproxy = exec('mitmdump -p 8888 -s .\mitmProxy.py -q')
+        //     mitmproxy.stdout.on('data', (data) => {
+        //         console.log(`stdout: ${data}`);
+        //       });
+              
+        //       mitmproxy.stderr.on('data', (data) => {
+        //         console.error(`stderr: ${data}`);
+        //       });
+        //     // 通过appium设置代理
+        //     await browser.execute('mobile: shell', {
+        //         command: 'settings put global http_proxy 192.168.1.7:8888',
+        //     })
+
+        //     await browser.execute('mobile: shell', {
+        //         command: 'settings put global http_proxy :0',  // 清除代理设置
+        //     });
+        // })
     })
 
 
