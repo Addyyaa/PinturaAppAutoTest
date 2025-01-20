@@ -8,6 +8,35 @@
         "case2": {
             "account": "test2@tester.com",
             "password": "sf123123"
+        },
+        "case3": {
+            "account": "test999@tester.com",
+            "password": "sf123123"
+        },
+        "case4": {
+            "account": "test2@tester.com",
+            "password": "sf123",
+            "expect": "密码由字母和数字组成，长度在6-12之间",
+            "expect_en": "6-12 chars long, nums & letters only. no special chars."
+        },
+        "case5": {
+            "account": "test2@tester.com",
+            "password": "sf123456",
+            "expect": "用户不存在或密码不正确，请确保输入信息及所选地区正确",
+            "expect_en": "The user does not exist or the password is incorrect, please make sure that the information entered and the selected region are correct"
+        },
+        "case6": {
+            "account": "test2@tester.com",
+            "password": "sf123456",
+            "expect": "账号或密码错误",
+            "expect_en": "Incorrect account number or password"
+        },
+        "case7": {
+            "account": "15250996938",
+            "password": "sf19960408"
+        },
+        "case8": {
+            "account": "15250996938"
         }
     }
 } 

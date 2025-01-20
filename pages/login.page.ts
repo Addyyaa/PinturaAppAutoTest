@@ -83,9 +83,26 @@ class LoginPage extends Page {
         return $('//android.widget.TextView[@text="验证码登录" or @text="Code"]');
     }
 
-    public get skipButton1zh() {
-        return $('//android.widget.TextView[@text="Skip" or @text="下一步"]')
+    public get  loginWithNoRegisterAccountTip() {
+        return $('//android.widget.TextView[@text="用户不存在或密码不正确，请确保输入信息及所选地区正确" or @text="The user does not exist or the password is incorrect, please make sure that the information entered and the selected region are correct"]');
     }
+
+    public get loginWithInCorrectPasswordTip() {
+        return $('//android.widget.TextView[@text="密码由字母和数字组成，长度在6-12之间" or @text="//android.widget.TextView[@text="6-12 chars long, nums & letters only. no special chars."]"]');
+    }
+
+    public get loginWithErrorPasswordTip() {
+        return $('//android.widget.TextView[@text="账号或密码错误" or @text="//android.widget.TextView[@text="Incorrect account number or password"]"]');
+    }
+
+    public get getCodeButton() {
+        return $('//android.widget.TextView[@text="获取验证码" or @text="Send Verification Code"]');
+    }
+
+    public get codeInput() {
+        return $('//android.widget.TextView[@text="请输入验证码" or @text="Verification code"]');
+    }
+    
     
     
     
