@@ -2,17 +2,20 @@ import LoginPage from '../../pages/login.page';
 import HomePage from '../../pages/home.page';
 import MyProfilePage from '../../pages/myProfile.page';
 import NativePage from '../../pages/native.page';
-import { exec } from 'child_process';
 import * as testData from '../data/test-data.json' assert { type: 'json' };
+import WebSocketClient from '../script/wsClient';
 
 
 describe('登录模块测试', () => {
     let language: 'zh' | 'en';
     let expectkey: 'expect' | 'expect_en';
+    let wsClient: WebSocketClient;
     
     before(() => {
         language = 'zh';  // 现在 TypeScript 知道这是合法的值
         expectkey = language === 'zh' ? 'expect' : 'expect_en';
+        wsClient = new WebSocketClient('ws://localhost:12345');
+        wsClient.connect();
     })
     
     describe('登录测试', () => {
@@ -215,25 +218,9 @@ describe('登录模块测试', () => {
             }
         })
 
-        // it.only('调试', async () => {
-        //     // 启动中间人拦截
-        //     const mitmproxy = exec('mitmdump -p 8888 -s .\mitmProxy.py -q')
-        //     mitmproxy.stdout.on('data', (data) => {
-        //         console.log(`stdout: ${data}`);
-        //       });
-              
-        //       mitmproxy.stderr.on('data', (data) => {
-        //         console.error(`stderr: ${data}`);
-        //       });
-        //     // 通过appium设置代理
-        //     await browser.execute('mobile: shell', {
-        //         command: 'settings put global http_proxy 192.168.1.7:8888',
-        //     })
-
-        //     await browser.execute('mobile: shell', {
-        //         command: 'settings put global http_proxy :0',  // 清除代理设置
-        //     });
-        // })
+        it.only('调试', async () => {
+            console.log('message====')
+        })
     })
 
 

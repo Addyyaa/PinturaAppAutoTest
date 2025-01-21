@@ -1,12 +1,31 @@
-2025-01-20T07:29:53.476Z INFO @wdio/local-runner: Run worker command: run
-2025-01-20T07:29:53.707Z DEBUG @wdio/runner: init remote session
-2025-01-20T07:29:53.713Z DEBUG @wdio/utils:initializeServices: initialize service "appium" as NPM package
-2025-01-20T07:29:53.729Z DEBUG @wdio/utils:initializeServices: initialize service "image-comparison" as NPM package
-2025-01-20T07:29:53.960Z DEBUG @wdio/runner: init remote session
-2025-01-20T07:29:53.962Z INFO webdriver: Initiate new session using the WebDriver protocol
-2025-01-20T07:29:53.962Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:1835/
-2025-01-20T07:29:53.970Z INFO webdriver: [POST] http://127.0.0.1:1835/session
-2025-01-20T07:29:53.970Z INFO webdriver: DATA {
+2025-01-21T09:40:00.308Z INFO @wdio/local-runner: Run worker command: run
+2025-01-21T09:40:00.534Z DEBUG @wdio/runner: init remote session
+2025-01-21T09:40:00.539Z DEBUG @wdio/utils:initializeServices: initialize service "appium" as NPM package
+2025-01-21T09:40:00.556Z DEBUG @wdio/utils:initializeServices: initialize service "image-comparison" as NPM package
+2025-01-21T09:40:00.807Z WARN @wdio/mocha-framework: Unable to load spec files quite likely because they rely on `browser` object that is not fully initialized.
+`browser` object has only `capabilities` and some flags like `isMobile`.
+Helper files that use other `browser` commands have to be moved to `before` hook.
+Spec file(s): file:///F:/autoTest/PinturaApp/test/specs/test.login.ts
+Error: F:\autoTest\PinturaApp\test\specs\test.login.ts:6
+import WebSocketClient from '../script/wsClient';
+       ^
+
+SyntaxError: The requested module '../script/wsClient' does not provide an export named 'default'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:134:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:217:5)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async formattedImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:9:14)
+    at async exports.requireOrImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:42:28)
+    at async exports.loadFilesAsync (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:100:20)
+    at MochaAdapter._loadFiles (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:200:7)
+    at MochaAdapter.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:195:5)
+    at Object.adapterFactory.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:334:20)
+    at async Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:685:23)
+2025-01-21T09:40:00.810Z DEBUG @wdio/runner: init remote session
+2025-01-21T09:40:00.813Z INFO webdriver: Initiate new session using the WebDriver protocol
+2025-01-21T09:40:00.814Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2025-01-21T09:40:00.830Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2025-01-21T09:40:00.830Z INFO webdriver: DATA {
   capabilities: {
     alwaysMatch: {
       platformName: 'Android',
@@ -19,7 +38,7 @@
     firstMatch: [ {} ]
   }
 }
-2025-01-20T07:29:58.712Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
+2025-01-21T09:40:05.435Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
     at getInstanceData (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\utils.js:43:37)
     at WdioImageComparisonService.addCommandsToBrowser (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:66:53)
     at WdioImageComparisonService.before (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:51:14)
@@ -30,590 +49,31 @@
     at executeHooksWithArgs (F:\autoTest\PinturaApp\node_modules\@wdio\utils\build\index.js:853:31)
     at Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:698:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-20T07:29:58.712Z DEBUG @wdio/utils:shim: Finished to run "before" hook in 0ms
-2025-01-20T07:29:58.720Z DEBUG @wdio/utils:shim: Finished to run "beforeTest" hook in 1ms
-2025-01-20T07:29:58.722Z INFO webdriver: COMMAND findElement("id", "com.ost.pintura:id/btn_custom_privacy_sure")
-2025-01-20T07:29:58.722Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:29:58.722Z INFO webdriver: DATA { using: 'id', value: 'com.ost.pintura:id/btn_custom_privacy_sure' }
-2025-01-20T07:29:58.947Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e5-ffff-ffff0000000a',
-  ELEMENT: '00000000-0000-13e5-ffff-ffff0000000a'
-}
-2025-01-20T07:29:59.438Z INFO webdriver: COMMAND isElementDisplayed("00000000-0000-13e5-ffff-ffff0000000a")
-2025-01-20T07:29:59.438Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e5-ffff-ffff0000000a/displayed
-2025-01-20T07:29:59.467Z INFO webdriver: RESULT true
-2025-01-20T07:29:59.467Z INFO webdriver: COMMAND getElementAttribute("00000000-0000-13e5-ffff-ffff0000000a", "clickable")
-2025-01-20T07:29:59.468Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e5-ffff-ffff0000000a/attribute/clickable
-2025-01-20T07:29:59.493Z INFO webdriver: RESULT true
-2025-01-20T07:29:59.494Z INFO webdriver: COMMAND elementClick("00000000-0000-13e5-ffff-ffff0000000a")
-2025-01-20T07:29:59.495Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e5-ffff-ffff0000000a/click
-2025-01-20T07:30:01.267Z INFO webdriver: RESULT null
-2025-01-20T07:30:01.267Z INFO webdriver: COMMAND findElement("xpath", "//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[1]/android.view.View")
-2025-01-20T07:30:01.268Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:01.268Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[1]/android.view.View'
-}
-2025-01-20T07:30:01.475Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:01.478Z DEBUG webdriverio: command click was called on an element ("//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[1]/android.view.View") that wasn't found, waiting for it...
-2025-01-20T07:30:01.479Z INFO webdriver: COMMAND findElements("xpath", "//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[1]/android.view.View")
-2025-01-20T07:30:01.479Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/elements
-2025-01-20T07:30:01.479Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[1]/android.view.View'
-}
-2025-01-20T07:30:02.697Z INFO webdriver: RESULT [
-  {
-    'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-000e00000069',
-    ELEMENT: '00000000-0000-13e6-0000-000e00000069'
-  }
-]
-2025-01-20T07:30:02.701Z INFO webdriver: COMMAND findElement("xpath", "//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[1]/android.view.View")
-2025-01-20T07:30:02.702Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:02.702Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[1]/android.view.View'
-}
-2025-01-20T07:30:03.204Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-000e00000069',
-  ELEMENT: '00000000-0000-13e6-0000-000e00000069'
-}
-2025-01-20T07:30:03.206Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-000e00000069")
-2025-01-20T07:30:03.206Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-000e00000069/click
-2025-01-20T07:30:03.283Z INFO webdriver: RESULT null
-2025-01-20T07:30:03.283Z INFO webdriver: COMMAND getWindowRect()
-2025-01-20T07:30:03.284Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/window/rect
-2025-01-20T07:30:03.304Z INFO webdriver: RESULT { width: 1080, height: 2400, x: 0, y: 0 }
-2025-01-20T07:30:03.306Z INFO webdriver: COMMAND findElement("xpath", "//android.view.View[@resource-id="easy-input"]")
-2025-01-20T07:30:03.306Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:03.306Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.view.View[@resource-id="easy-input"]'
-}
-2025-01-20T07:30:03.352Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:03.355Z INFO webdriver: COMMAND findElement("xpath", "//android.view.View[@resource-id="easy-input"]")
-2025-01-20T07:30:03.356Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:03.356Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.view.View[@resource-id="easy-input"]'
-}
-2025-01-20T07:30:03.401Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:03.857Z INFO webdriver: COMMAND findElement("xpath", "//android.view.View[@resource-id="easy-input"]")
-2025-01-20T07:30:03.858Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:03.858Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.view.View[@resource-id="easy-input"]'
-}
-2025-01-20T07:30:03.960Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-003100000069',
-  ELEMENT: '00000000-0000-13e6-0000-003100000069'
-}
-2025-01-20T07:30:03.961Z INFO webdriver: COMMAND isElementDisplayed("00000000-0000-13e6-0000-003100000069")
-2025-01-20T07:30:03.961Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-003100000069/displayed
-2025-01-20T07:30:03.982Z INFO webdriver: RESULT true
-2025-01-20T07:30:03.982Z INFO webdriver: COMMAND performActions(<object>)
-2025-01-20T07:30:03.983Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/actions
-2025-01-20T07:30:03.983Z INFO webdriver: DATA {
-  actions: [
-    {
-      id: 'action1',
-      type: 'pointer',
-      parameters: [Object],
-      actions: [Array]
-    }
-  ]
-}
-2025-01-20T07:30:04.133Z INFO webdriver: RESULT null
-2025-01-20T07:30:04.133Z INFO webdriver: COMMAND releaseActions()
-2025-01-20T07:30:04.133Z INFO webdriver: [DELETE] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/actions
-2025-01-20T07:30:04.139Z INFO webdriver: RESULT null
-2025-01-20T07:30:04.143Z INFO webdriver: COMMAND performActions(<object>)
-2025-01-20T07:30:04.143Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/actions
-2025-01-20T07:30:04.143Z INFO webdriver: DATA {
-  actions: [ { id: 'action2', type: 'key', parameters: {}, actions: [Array] } ]
-}
-2025-01-20T07:30:04.348Z INFO webdriver: RESULT null
-2025-01-20T07:30:04.348Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[contains(@text, '中国大陆(CN)')]")
-2025-01-20T07:30:04.348Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:04.348Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: "//android.widget.TextView[contains(@text, '中国大陆(CN)')]"
-}
-2025-01-20T07:30:05.113Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-003800000069',
-  ELEMENT: '00000000-0000-13e6-0000-003800000069'
-}
-2025-01-20T07:30:05.114Z INFO webdriver: COMMAND isElementDisplayed("00000000-0000-13e6-0000-003800000069")
-2025-01-20T07:30:05.114Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-003800000069/displayed
-2025-01-20T07:30:05.142Z INFO webdriver: RESULT true
-2025-01-20T07:30:05.143Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-003800000069")
-2025-01-20T07:30:05.143Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-003800000069/click
-2025-01-20T07:30:05.898Z INFO webdriver: RESULT null
-2025-01-20T07:30:05.898Z INFO webdriver: COMMAND findElement("xpath", "//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[2]/android.view.View")
-2025-01-20T07:30:05.899Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:05.899Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.webkit.WebView[@text="pages/area[2]"]/android.view.View[2]/android.view.View'
-}
-2025-01-20T07:30:06.018Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-001700000069',
-  ELEMENT: '00000000-0000-13e6-0000-001700000069'
-}
-2025-01-20T07:30:06.021Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-001700000069")
-2025-01-20T07:30:06.021Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-001700000069/click
-2025-01-20T07:30:06.088Z INFO webdriver: RESULT null
-2025-01-20T07:30:06.088Z INFO webdriver: COMMAND findElement("xpath", "(//android.widget.TextView[@text="简体中文"])[2]")
-2025-01-20T07:30:06.088Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:06.088Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '(//android.widget.TextView[@text="简体中文"])[2]'
-}
-2025-01-20T07:30:06.144Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:06.147Z DEBUG webdriverio: command getText was called on an element ("(//android.widget.TextView[@text="简体中文"])[2]") that wasn't found, waiting for it...
-2025-01-20T07:30:06.147Z INFO webdriver: COMMAND findElements("xpath", "(//android.widget.TextView[@text="简体中文"])[2]")
-2025-01-20T07:30:06.147Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/elements
-2025-01-20T07:30:06.147Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '(//android.widget.TextView[@text="简体中文"])[2]'
-}
-2025-01-20T07:30:06.220Z INFO webdriver: RESULT []
-2025-01-20T07:30:06.650Z INFO webdriver: COMMAND findElements("xpath", "(//android.widget.TextView[@text="简体中文"])[2]")
-2025-01-20T07:30:06.650Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/elements
-2025-01-20T07:30:06.650Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '(//android.widget.TextView[@text="简体中文"])[2]'
-}
-2025-01-20T07:30:06.757Z INFO webdriver: RESULT [
-  {
-    'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-061000000069',
-    ELEMENT: '00000000-0000-13e6-0000-061000000069'
-  }
-]
-2025-01-20T07:30:06.759Z INFO webdriver: COMMAND findElement("xpath", "(//android.widget.TextView[@text="简体中文"])[2]")
-2025-01-20T07:30:06.760Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:06.760Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '(//android.widget.TextView[@text="简体中文"])[2]'
-}
-2025-01-20T07:30:06.848Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-061000000069',
-  ELEMENT: '00000000-0000-13e6-0000-061000000069'
-}
-2025-01-20T07:30:06.849Z INFO webdriver: COMMAND getElementText("00000000-0000-13e6-0000-061000000069")
-2025-01-20T07:30:06.850Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-061000000069/text
-2025-01-20T07:30:06.872Z INFO webdriver: RESULT 简体中文
-2025-01-20T07:30:06.872Z INFO webdriver: COMMAND performActions(<object>)
-2025-01-20T07:30:06.872Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/actions
-2025-01-20T07:30:06.872Z INFO webdriver: DATA {
-  actions: [
-    {
-      id: 'action3',
-      type: 'pointer',
-      parameters: [Object],
-      actions: [Array]
-    }
-  ]
-}
-2025-01-20T07:30:07.018Z INFO webdriver: RESULT null
-2025-01-20T07:30:07.018Z INFO webdriver: COMMAND releaseActions()
-2025-01-20T07:30:07.018Z INFO webdriver: [DELETE] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/actions
-2025-01-20T07:30:07.020Z INFO webdriver: RESULT null
-2025-01-20T07:30:07.020Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="确定"]")
-2025-01-20T07:30:07.020Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:07.020Z INFO webdriver: DATA { using: 'xpath', value: '//android.widget.TextView[@text="确定"]' }
-2025-01-20T07:30:07.076Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-001d00000069',
-  ELEMENT: '00000000-0000-13e6-0000-001d00000069'
-}
-2025-01-20T07:30:07.078Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-001d00000069")
-2025-01-20T07:30:07.078Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-001d00000069/click
-2025-01-20T07:30:07.129Z INFO webdriver: RESULT null
-2025-01-20T07:30:07.130Z DEBUG @wdio/utils:shim: Finished to run "beforeTest" hook in 0ms
-2025-01-20T07:30:07.130Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]")
-2025-01-20T07:30:07.130Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:07.130Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]'
-}
-2025-01-20T07:30:07.191Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:07.192Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]")
-2025-01-20T07:30:07.192Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:07.192Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]'
-}
-2025-01-20T07:30:07.241Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:07.698Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]")
-2025-01-20T07:30:07.698Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:07.698Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]'
-}
-2025-01-20T07:30:08.247Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:08.250Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]")
-2025-01-20T07:30:08.250Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:08.250Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="邮箱登录" or @text="E-mail"]'
-}
-2025-01-20T07:30:09.662Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-06b60000009b',
-  ELEMENT: '00000000-0000-13e6-0000-06b60000009b'
-}
-2025-01-20T07:30:09.664Z INFO webdriver: COMMAND isElementDisplayed("00000000-0000-13e6-0000-06b60000009b")
-2025-01-20T07:30:09.664Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-06b60000009b/displayed
-2025-01-20T07:30:10.039Z INFO webdriver: RESULT true
-2025-01-20T07:30:10.039Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-06b60000009b")
-2025-01-20T07:30:10.039Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-06b60000009b/click
-2025-01-20T07:30:10.118Z INFO webdriver: RESULT null
-2025-01-20T07:30:10.119Z INFO webdriver: COMMAND findElement("xpath", "(//android.widget.EditText)[1]")
-2025-01-20T07:30:10.119Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:10.119Z INFO webdriver: DATA { using: 'xpath', value: '(//android.widget.EditText)[1]' }
-2025-01-20T07:30:10.959Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-074f0000009b',
-  ELEMENT: '00000000-0000-13e6-0000-074f0000009b'
-}
-2025-01-20T07:30:10.961Z INFO webdriver: COMMAND isElementDisplayed("00000000-0000-13e6-0000-074f0000009b")
-2025-01-20T07:30:10.961Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-074f0000009b/displayed
-2025-01-20T07:30:10.990Z INFO webdriver: RESULT true
-2025-01-20T07:30:10.990Z INFO webdriver: COMMAND elementSendKeys("00000000-0000-13e6-0000-074f0000009b", "test2@tester.com")
-2025-01-20T07:30:10.991Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-074f0000009b/value
-2025-01-20T07:30:10.991Z INFO webdriver: DATA { text: 'test2@tester.com' }
-2025-01-20T07:30:11.037Z INFO webdriver: RESULT null
-2025-01-20T07:30:11.038Z INFO webdriver: COMMAND findElement("xpath", "(//android.widget.EditText)[2]")
-2025-01-20T07:30:11.038Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:11.038Z INFO webdriver: DATA { using: 'xpath', value: '(//android.widget.EditText)[2]' }
-2025-01-20T07:30:11.273Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-07590000009b',
-  ELEMENT: '00000000-0000-13e6-0000-07590000009b'
-}
-2025-01-20T07:30:11.276Z INFO webdriver: COMMAND isElementDisplayed("00000000-0000-13e6-0000-07590000009b")
-2025-01-20T07:30:11.276Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-07590000009b/displayed
-2025-01-20T07:30:11.314Z INFO webdriver: RESULT true
-2025-01-20T07:30:11.314Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-07590000009b")
-2025-01-20T07:30:11.314Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-07590000009b/click
-2025-01-20T07:30:11.386Z INFO webdriver: RESULT null
-2025-01-20T07:30:11.387Z INFO webdriver: COMMAND elementSendKeys("00000000-0000-13e6-0000-07590000009b", "<Screenshot[base64]>")
-2025-01-20T07:30:11.387Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-07590000009b/value
-2025-01-20T07:30:11.387Z INFO webdriver: DATA { text: 'sf123123' }
-2025-01-20T07:30:11.427Z INFO webdriver: RESULT null
-2025-01-20T07:30:11.428Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="登录" or @text="Login"]")
-2025-01-20T07:30:11.428Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:11.428Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="登录" or @text="Login"]'
-}
-2025-01-20T07:30:11.564Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-070f0000009b',
-  ELEMENT: '00000000-0000-13e6-0000-070f0000009b'
-}
-2025-01-20T07:30:11.567Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-070f0000009b")
-2025-01-20T07:30:11.567Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-070f0000009b/click
-2025-01-20T07:30:13.010Z INFO webdriver: RESULT null
-2025-01-20T07:30:13.011Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="同意并登录" or @text="Agree and Log In"]")
-2025-01-20T07:30:13.011Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:13.011Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="同意并登录" or @text="Agree and Log In"]'
-}
-2025-01-20T07:30:13.480Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-06be0000009b',
-  ELEMENT: '00000000-0000-13e6-0000-06be0000009b'
-}
-2025-01-20T07:30:13.482Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-06be0000009b")
-2025-01-20T07:30:13.482Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-06be0000009b/click
-2025-01-20T07:30:13.561Z INFO webdriver: RESULT null
-2025-01-20T07:30:13.561Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="忽略" or @text="Ignore"]")
-2025-01-20T07:30:13.561Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:13.561Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="忽略" or @text="Ignore"]'
-}
-2025-01-20T07:30:13.683Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:13.686Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="忽略" or @text="Ignore"]")
-2025-01-20T07:30:13.686Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:13.686Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="忽略" or @text="Ignore"]'
-}
-2025-01-20T07:30:14.939Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:14.945Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="忽略" or @text="Ignore"]")
-2025-01-20T07:30:14.945Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:14.945Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="忽略" or @text="Ignore"]'
-}
-2025-01-20T07:30:16.290Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-08080000009f',
-  ELEMENT: '00000000-0000-13e6-0000-08080000009f'
-}
-2025-01-20T07:30:16.292Z INFO webdriver: COMMAND isElementDisplayed("00000000-0000-13e6-0000-08080000009f")
-2025-01-20T07:30:16.292Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-08080000009f/displayed
-2025-01-20T07:30:16.328Z INFO webdriver: RESULT true
-2025-01-20T07:30:16.328Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-08080000009f")
-2025-01-20T07:30:16.328Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-08080000009f/click
-2025-01-20T07:30:16.400Z INFO webdriver: RESULT null
-2025-01-20T07:30:16.401Z INFO webdriver: COMMAND getSettings()
-2025-01-20T07:30:16.401Z INFO webdriver: [GET] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/appium/settings
-2025-01-20T07:30:16.430Z INFO webdriver: RESULT {
-  ignoreUnimportantViews: false,
-  allowInvisibleElements: false,
-  elementResponseAttributes: 'name,text',
-  snapshotMaxDepth: 70,
-  mjpegBilinearFiltering: false,
-  waitForSelectorTimeout: 10000,
-  serverPort: 6790,
-  simpleBoundsCalculation: false,
-  enableNotificationListener: true,
-  limitXPathContextScope: true,
-  includeExtrasInPageSource: false,
-  normalizeTagNames: false,
-  trackScrollEvents: true,
-  scrollAcknowledgmentTimeout: 200,
-  enableTopmostWindowFromActivePackage: false,
-  enableMultiWindows: false,
-  useResourcesForOrientationDetection: false,
-  shouldUseCompactResponses: true,
-  wakeLockTimeout: 86380531,
-  shutdownOnPowerDisconnect: true,
-  mjpegServerPort: 7810,
-  mjpegScalingFactor: 50,
-  disableIdLocatorAutocompletion: false,
-  enforceXPath1: false,
-  actionAcknowledgmentTimeout: 3000,
-  mjpegServerScreenshotQuality: 50,
-  keyInjectionDelay: 0,
-  waitForIdleTimeout: 10000,
-  mjpegServerFramerate: 10
-}
-2025-01-20T07:30:16.430Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="Skip" or @text="跳过"]")
-2025-01-20T07:30:16.431Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:16.431Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="Skip" or @text="跳过"]'
-}
-2025-01-20T07:30:17.372Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-08000000009f',
-  ELEMENT: '00000000-0000-13e6-0000-08000000009f'
-}
-2025-01-20T07:30:17.373Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.TextView[@text="Skip" or @text="跳过"]")
-2025-01-20T07:30:17.373Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/elements
-2025-01-20T07:30:17.373Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="Skip" or @text="跳过"]'
-}
-2025-01-20T07:30:17.608Z INFO webdriver: RESULT [
-  {
-    'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-08000000009f',
-    ELEMENT: '00000000-0000-13e6-0000-08000000009f'
-  }
-]
-2025-01-20T07:30:17.610Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="Skip" or @text="跳过"]")
-2025-01-20T07:30:17.610Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:17.610Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="Skip" or @text="跳过"]'
-}
-2025-01-20T07:30:17.830Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-08000000009f',
-  ELEMENT: '00000000-0000-13e6-0000-08000000009f'
-}
-2025-01-20T07:30:17.832Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-08000000009f")
-2025-01-20T07:30:17.832Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-08000000009f/click
-2025-01-20T07:30:17.898Z INFO webdriver: RESULT null
-2025-01-20T07:30:17.898Z INFO webdriver: COMMAND findElement("xpath", "(//android.widget.TextView[@text="我的" or @text="My profile"])[1]")
-2025-01-20T07:30:17.899Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:17.899Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '(//android.widget.TextView[@text="我的" or @text="My profile"])[1]'
-}
-2025-01-20T07:30:18.051Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-07cc0000009f',
-  ELEMENT: '00000000-0000-13e6-0000-07cc0000009f'
-}
-2025-01-20T07:30:18.053Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-07cc0000009f")
-2025-01-20T07:30:18.053Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-07cc0000009f/click
-2025-01-20T07:30:18.124Z INFO webdriver: RESULT null
-2025-01-20T07:30:18.124Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="Skip" or @text="跳过"]")
-2025-01-20T07:30:18.124Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:18.124Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="Skip" or @text="跳过"]'
-}
-2025-01-20T07:30:18.239Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:18.241Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.TextView[@text="Skip" or @text="跳过"]")
-2025-01-20T07:30:18.241Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/elements
-2025-01-20T07:30:18.241Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="Skip" or @text="跳过"]'
-}
-2025-01-20T07:30:19.550Z INFO webdriver: RESULT [
-  {
-    'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-0890000000ac',
-    ELEMENT: '00000000-0000-13e6-0000-0890000000ac'
-  }
-]
-2025-01-20T07:30:19.553Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="Skip" or @text="跳过"]")
-2025-01-20T07:30:19.554Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:19.554Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="Skip" or @text="跳过"]'
-}
-2025-01-20T07:30:19.896Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-0890000000ac',
-  ELEMENT: '00000000-0000-13e6-0000-0890000000ac'
-}
-2025-01-20T07:30:19.898Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-0890000000ac")
-2025-01-20T07:30:19.898Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-0890000000ac/click
-2025-01-20T07:30:19.952Z INFO webdriver: RESULT null
-2025-01-20T07:30:19.952Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="Settings" or @text="设置中心"]")
-2025-01-20T07:30:19.952Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:19.952Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="Settings" or @text="设置中心"]'
-}
-2025-01-20T07:30:20.071Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-0878000000ac',
-  ELEMENT: '00000000-0000-13e6-0000-0878000000ac'
-}
-2025-01-20T07:30:20.073Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-0878000000ac")
-2025-01-20T07:30:20.073Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-0878000000ac/click
-2025-01-20T07:30:20.175Z INFO webdriver: RESULT null
-2025-01-20T07:30:20.175Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="退出登录" or @text="Sign Out"]")
-2025-01-20T07:30:20.175Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:20.175Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="退出登录" or @text="Sign Out"]'
-}
-2025-01-20T07:30:20.416Z INFO webdriver: RESULT {
-  error: 'no such element',
-  message: 'An element could not be located on the page using the given search parameters.',
-  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
-    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\SHEN\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
-    '    at AndroidUiautomator2Driver.findElement (F:\\autoTest\\PinturaApp\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
-}
-2025-01-20T07:30:20.417Z DEBUG webdriverio: command click was called on an element ("//android.widget.TextView[@text="退出登录" or @text="Sign Out"]") that wasn't found, waiting for it...
-2025-01-20T07:30:20.418Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.TextView[@text="退出登录" or @text="Sign Out"]")
-2025-01-20T07:30:20.418Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/elements
-2025-01-20T07:30:20.418Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="退出登录" or @text="Sign Out"]'
-}
-2025-01-20T07:30:21.853Z INFO webdriver: RESULT [
-  {
-    'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-08c8000000b0',
-    ELEMENT: '00000000-0000-13e6-0000-08c8000000b0'
-  }
-]
-2025-01-20T07:30:21.854Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="退出登录" or @text="Sign Out"]")
-2025-01-20T07:30:21.855Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:21.855Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="退出登录" or @text="Sign Out"]'
-}
-2025-01-20T07:30:22.330Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-08c8000000b0',
-  ELEMENT: '00000000-0000-13e6-0000-08c8000000b0'
-}
-2025-01-20T07:30:22.332Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-08c8000000b0")
-2025-01-20T07:30:22.332Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-08c8000000b0/click
-2025-01-20T07:30:22.396Z INFO webdriver: RESULT null
-2025-01-20T07:30:22.396Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@text="确定退出" or @text="Confirm"]")
-2025-01-20T07:30:22.396Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element
-2025-01-20T07:30:22.396Z INFO webdriver: DATA {
-  using: 'xpath',
-  value: '//android.widget.TextView[@text="确定退出" or @text="Confirm"]'
-}
-2025-01-20T07:30:22.637Z INFO webdriver: RESULT {
-  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-13e6-0000-08e4000000b0',
-  ELEMENT: '00000000-0000-13e6-0000-08e4000000b0'
-}
-2025-01-20T07:30:22.639Z INFO webdriver: COMMAND elementClick("00000000-0000-13e6-0000-08e4000000b0")
-2025-01-20T07:30:22.639Z INFO webdriver: [POST] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810/element/00000000-0000-13e6-0000-08e4000000b0/click
-2025-01-20T07:30:22.707Z INFO webdriver: RESULT null
-2025-01-20T07:30:22.708Z DEBUG @wdio/utils:shim: Finished to run "after" hook in 0ms
-2025-01-20T07:30:22.708Z INFO webdriver: COMMAND deleteSession()
-2025-01-20T07:30:22.709Z INFO webdriver: [DELETE] http://127.0.0.1:1835/session/c84e63ff-cb18-4c1d-90c0-c0bcd244b810
-2025-01-20T07:30:22.942Z INFO webdriver: RESULT null
+2025-01-21T09:40:05.436Z DEBUG @wdio/utils:shim: Finished to run "before" hook in 0ms
+2025-01-21T09:40:05.441Z DEBUG @wdio/utils:shim: Finished to run "after" hook in 0ms
+2025-01-21T09:40:05.442Z ERROR @wdio/runner: Error: Unable to load spec files quite likely because they rely on `browser` object that is not fully initialized.
+`browser` object has only `capabilities` and some flags like `isMobile`.
+Helper files that use other `browser` commands have to be moved to `before` hook.
+Spec file(s): file:///F:/autoTest/PinturaApp/test/specs/test.login.ts
+Error: F:\autoTest\PinturaApp\test\specs\test.login.ts:6
+import WebSocketClient from '../script/wsClient';
+       ^
+
+SyntaxError: The requested module '../script/wsClient' does not provide an export named 'default'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:134:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:217:5)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async formattedImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:9:14)
+    at async exports.requireOrImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:42:28)
+    at async exports.loadFilesAsync (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:100:20)
+    at MochaAdapter._loadFiles (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:200:7)
+    at MochaAdapter.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:195:5)
+    at Object.adapterFactory.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:334:20)
+    at async Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:685:23)
+    at MochaAdapter._loadFiles (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:214:29)
+    at MochaAdapter.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:195:5)
+    at Object.adapterFactory.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:334:20)
+    at async Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:685:23)
+2025-01-21T09:40:05.443Z INFO webdriver: COMMAND deleteSession()
+2025-01-21T09:40:05.444Z INFO webdriver: [DELETE] http://127.0.0.1:4723/session/717781e1-f2c2-431b-bac4-a9e4e8233b27
+2025-01-21T09:40:05.677Z INFO webdriver: RESULT null

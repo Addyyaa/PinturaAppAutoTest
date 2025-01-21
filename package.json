@@ -4,7 +4,9 @@
   "description": "auto test",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "proxy": "mitmdump -p 8888 -s test/script/mitmproxy.py -q",
+    "ws": "node test/script/websocketServer.js"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@appium/fake-driver": "^5.7.0"
+    "@appium/fake-driver": "^5.7.0",
+    "ws": "^8.18.0"
   }
 }
