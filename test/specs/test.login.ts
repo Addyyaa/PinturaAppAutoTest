@@ -11,11 +11,19 @@ describe('登录模块测试', () => {
     let expectkey: 'expect' | 'expect_en';
     let wsClient: WebSocketClient;
     
-    before(() => {
+    before(async () => {
         language = 'zh';  // 现在 TypeScript 知道这是合法的值
         expectkey = language === 'zh' ? 'expect' : 'expect_en';
-        wsClient = new WebSocketClient('ws://localhost:12345');
-        wsClient.connect();
+        try {
+            wsClient = new WebSocketClient('ws://localhost:12345');
+            await wsClient.connect()
+        } catch (error) {
+            console.error('WebSocket 连接错误:', error);
+        }
+    })
+
+    after(() => {
+        wsClient.close()
     })
     
     describe('登录测试', () => {
@@ -219,7 +227,10 @@ describe('登录模块测试', () => {
         })
 
         it.only('调试', async () => {
-            console.log('message====')
+            console.log('开始调试...');
+            console.log("wsClient====",wsClient)
+            const msg = await wsClient.waitForNextMessage(100000);
+            console.log("msg====",msg)
         })
     })
 

@@ -1,31 +1,8 @@
-2025-01-21T09:40:00.308Z INFO @wdio/local-runner: Run worker command: run
-2025-01-21T09:40:00.534Z DEBUG @wdio/runner: init remote session
-2025-01-21T09:40:00.539Z DEBUG @wdio/utils:initializeServices: initialize service "appium" as NPM package
-2025-01-21T09:40:00.556Z DEBUG @wdio/utils:initializeServices: initialize service "image-comparison" as NPM package
-2025-01-21T09:40:00.807Z WARN @wdio/mocha-framework: Unable to load spec files quite likely because they rely on `browser` object that is not fully initialized.
-`browser` object has only `capabilities` and some flags like `isMobile`.
-Helper files that use other `browser` commands have to be moved to `before` hook.
-Spec file(s): file:///F:/autoTest/PinturaApp/test/specs/test.login.ts
-Error: F:\autoTest\PinturaApp\test\specs\test.login.ts:6
-import WebSocketClient from '../script/wsClient';
-       ^
-
-SyntaxError: The requested module '../script/wsClient' does not provide an export named 'default'
-    at ModuleJob._instantiate (node:internal/modules/esm/module_job:134:21)
-    at async ModuleJob.run (node:internal/modules/esm/module_job:217:5)
-    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
-    at async formattedImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:9:14)
-    at async exports.requireOrImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:42:28)
-    at async exports.loadFilesAsync (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:100:20)
-    at MochaAdapter._loadFiles (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:200:7)
-    at MochaAdapter.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:195:5)
-    at Object.adapterFactory.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:334:20)
-    at async Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:685:23)
-2025-01-21T09:40:00.810Z DEBUG @wdio/runner: init remote session
-2025-01-21T09:40:00.813Z INFO webdriver: Initiate new session using the WebDriver protocol
-2025-01-21T09:40:00.814Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
-2025-01-21T09:40:00.830Z INFO webdriver: [POST] http://127.0.0.1:4723/session
-2025-01-21T09:40:00.830Z INFO webdriver: DATA {
+2025-01-22T09:40:05.487Z INFO @wdio/local-runner: Run worker command: run
+2025-01-22T09:40:06.043Z INFO webdriver: Initiate new session using the WebDriver protocol
+2025-01-22T09:40:06.043Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2025-01-22T09:40:06.058Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2025-01-22T09:40:06.059Z INFO webdriver: DATA {
   capabilities: {
     alwaysMatch: {
       platformName: 'Android',
@@ -38,7 +15,7 @@ SyntaxError: The requested module '../script/wsClient' does not provide an expor
     firstMatch: [ {} ]
   }
 }
-2025-01-21T09:40:05.435Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
+2025-01-22T09:40:11.557Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
     at getInstanceData (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\utils.js:43:37)
     at WdioImageComparisonService.addCommandsToBrowser (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:66:53)
     at WdioImageComparisonService.before (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:51:14)
@@ -49,31 +26,6 @@ SyntaxError: The requested module '../script/wsClient' does not provide an expor
     at executeHooksWithArgs (F:\autoTest\PinturaApp\node_modules\@wdio\utils\build\index.js:853:31)
     at Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:698:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-21T09:40:05.436Z DEBUG @wdio/utils:shim: Finished to run "before" hook in 0ms
-2025-01-21T09:40:05.441Z DEBUG @wdio/utils:shim: Finished to run "after" hook in 0ms
-2025-01-21T09:40:05.442Z ERROR @wdio/runner: Error: Unable to load spec files quite likely because they rely on `browser` object that is not fully initialized.
-`browser` object has only `capabilities` and some flags like `isMobile`.
-Helper files that use other `browser` commands have to be moved to `before` hook.
-Spec file(s): file:///F:/autoTest/PinturaApp/test/specs/test.login.ts
-Error: F:\autoTest\PinturaApp\test\specs\test.login.ts:6
-import WebSocketClient from '../script/wsClient';
-       ^
-
-SyntaxError: The requested module '../script/wsClient' does not provide an export named 'default'
-    at ModuleJob._instantiate (node:internal/modules/esm/module_job:134:21)
-    at async ModuleJob.run (node:internal/modules/esm/module_job:217:5)
-    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
-    at async formattedImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:9:14)
-    at async exports.requireOrImport (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:42:28)
-    at async exports.loadFilesAsync (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\node_modules\mocha\lib\nodejs\esm-utils.js:100:20)
-    at MochaAdapter._loadFiles (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:200:7)
-    at MochaAdapter.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:195:5)
-    at Object.adapterFactory.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:334:20)
-    at async Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:685:23)
-    at MochaAdapter._loadFiles (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:214:29)
-    at MochaAdapter.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:195:5)
-    at Object.adapterFactory.init (F:\autoTest\PinturaApp\node_modules\@wdio\mocha-framework\build\index.js:334:20)
-    at async Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:685:23)
-2025-01-21T09:40:05.443Z INFO webdriver: COMMAND deleteSession()
-2025-01-21T09:40:05.444Z INFO webdriver: [DELETE] http://127.0.0.1:4723/session/717781e1-f2c2-431b-bac4-a9e4e8233b27
-2025-01-21T09:40:05.677Z INFO webdriver: RESULT null
+2025-01-22T09:40:11.585Z INFO webdriver: COMMAND deleteSession()
+2025-01-22T09:40:11.585Z INFO webdriver: [DELETE] http://127.0.0.1:4723/session/f4bc0028-2ed7-4ada-aaa6-6cccf7fdce0d
+2025-01-22T09:40:12.033Z INFO webdriver: RESULT null
