@@ -228,9 +228,10 @@ describe('登录模块测试', () => {
 
         it.only('调试', async () => {
             console.log('开始调试...');
-            console.log("wsClient====",wsClient)
             const msg = await wsClient.waitForNextMessage(100000);
             console.log("msg====",msg)
+            const msg2 = await wsClient.waitForNextMessage(100000);
+            console.log("msg2====",msg2)
         })
     })
 

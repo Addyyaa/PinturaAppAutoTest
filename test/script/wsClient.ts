@@ -39,7 +39,6 @@ export default class WebSocketClient {
       // 接收消息
       this.client.on('message', (data: WebSocket.Data) => {
         try {
-          console.log("收到消息====",data)
           const message: MessageType = JSON.parse(data.toString());
           this.handleMessage(message);
         } catch (error) {
@@ -96,6 +95,13 @@ export default class WebSocketClient {
       throw new Error('WebSocket 未连接');
     }
     this.client.send(JSON.stringify(message));
+  }
+
+  subscribe(callback: (message: MessageType) => void): void {
+    this.client?.on('message', (data: WebSocket.Data) => {
+      const message: MessageType = JSON.parse(data.toString());
+      callback(message);
+    });
   }
 
   /**

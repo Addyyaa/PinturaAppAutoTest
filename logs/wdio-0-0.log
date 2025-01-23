@@ -1,8 +1,8 @@
-2025-01-22T09:40:05.487Z INFO @wdio/local-runner: Run worker command: run
-2025-01-22T09:40:06.043Z INFO webdriver: Initiate new session using the WebDriver protocol
-2025-01-22T09:40:06.043Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
-2025-01-22T09:40:06.058Z INFO webdriver: [POST] http://127.0.0.1:4723/session
-2025-01-22T09:40:06.059Z INFO webdriver: DATA {
+2025-01-23T03:14:30.763Z INFO @wdio/local-runner: Run worker command: run
+2025-01-23T03:14:31.213Z INFO webdriver: Initiate new session using the WebDriver protocol
+2025-01-23T03:14:31.213Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:3323/
+2025-01-23T03:14:31.223Z INFO webdriver: [POST] http://127.0.0.1:3323/session
+2025-01-23T03:14:31.224Z INFO webdriver: DATA {
   capabilities: {
     alwaysMatch: {
       platformName: 'Android',
@@ -15,7 +15,7 @@
     firstMatch: [ {} ]
   }
 }
-2025-01-22T09:40:11.557Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
+2025-01-23T03:14:35.634Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
     at getInstanceData (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\utils.js:43:37)
     at WdioImageComparisonService.addCommandsToBrowser (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:66:53)
     at WdioImageComparisonService.before (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:51:14)
@@ -26,6 +26,21 @@
     at executeHooksWithArgs (F:\autoTest\PinturaApp\node_modules\@wdio\utils\build\index.js:853:31)
     at Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:698:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-22T09:40:11.585Z INFO webdriver: COMMAND deleteSession()
-2025-01-22T09:40:11.585Z INFO webdriver: [DELETE] http://127.0.0.1:4723/session/f4bc0028-2ed7-4ada-aaa6-6cccf7fdce0d
-2025-01-22T09:40:12.033Z INFO webdriver: RESULT null
+2025-01-23T03:15:35.669Z INFO webdriver: COMMAND deleteSession()
+2025-01-23T03:15:35.670Z INFO webdriver: [DELETE] http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04
+2025-01-23T03:15:35.694Z WARN webdriver: WebDriverError: A session is either terminated or not started when running "http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04" with method "DELETE"
+2025-01-23T03:15:35.695Z INFO webdriver: Retrying 1/3
+2025-01-23T03:15:35.695Z INFO webdriver: [DELETE] http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04
+2025-01-23T03:15:36.220Z WARN webdriver: WebDriverError: A session is either terminated or not started when running "http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04" with method "DELETE"
+2025-01-23T03:15:36.221Z INFO webdriver: Retrying 2/3
+2025-01-23T03:15:36.221Z INFO webdriver: [DELETE] http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04
+2025-01-23T03:15:37.230Z WARN webdriver: WebDriverError: A session is either terminated or not started when running "http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04" with method "DELETE"
+2025-01-23T03:15:37.231Z INFO webdriver: Retrying 3/3
+2025-01-23T03:15:37.231Z INFO webdriver: [DELETE] http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04
+2025-01-23T03:15:37.236Z ERROR webdriver: WebDriverError: A session is either terminated or not started when running "http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04" with method "DELETE"
+2025-01-23T03:15:37.237Z ERROR @wdio/local-runner: Failed launching test session: invalid session id: WebDriverError: A session is either terminated or not started when running "http://127.0.0.1:3323/session/e400657e-b2cf-427a-8944-4ccb65524a04" with method "DELETE"
+    at FetchRequest._request (file:///F:/autoTest/PinturaApp/node_modules/webdriver/build/node.js:1679:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Browser.wrapCommandFn (F:\autoTest\PinturaApp\node_modules\@wdio\utils\build\index.js:893:23)
+    at async Runner.endSession (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:901:5)
+    at async Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:755:7)

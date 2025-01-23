@@ -1,4 +1,4 @@
-import { WebSocketServer } from 'ws';
+import { WebSocketServer, WebSocket } from 'ws';
 
 export class WSDataManager {
     /**
@@ -19,16 +19,32 @@ export class WSDataManager {
         
         wss.on('connection', (ws) => {
             console.log('新客户端已连接');
-            // 主动发送测试消息
-            ws.send(JSON.stringify({ type: 'TEST', data: '你已连接' }));
             
             ws.on('message', (data) => {
-                this.lastMessage = data;
-                this.handleNewMessage(data);
-                console.log("收到新的消息，转发给订阅者")
-                this.subscribers.forEach(callback => callback(data));
-                // 打印原始消息
-                console.log('收到原始消息:', data.toString());
+                console.log('服务端收到消息:', data.toString());
+                
+                try {
+                    // 解析接收到的数据
+                    const receivedData = JSON.parse(data.toString());
+                    
+                    // 广播消息给所有连接的客户端
+                    wss.clients.forEach(client => {
+                        if (client.readyState === WebSocket.OPEN) {
+                            // 确保发送的是格式化的 JSON 消息
+                            client.send(JSON.stringify({ 
+                                type: 'BROADCAST', 
+                                data: receivedData,
+                                timestamp: Date.now()
+                            }));
+                        }
+                    });
+                    
+                    this.lastMessage = receivedData;
+                    this.handleNewMessage(receivedData);
+                    this.subscribers.forEach(callback => callback(receivedData));
+                } catch (error) {
+                    console.error('消息处理错误:', error);
+                }
             });
 
             ws.on('error', (error) => {
