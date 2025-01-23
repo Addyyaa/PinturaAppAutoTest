@@ -1,5 +1,9 @@
 {
     "screenApi": {
         "getScreenPics64": "/api/v1/screenPicture/page/list"
-    }
+    },
+    "screenGroupApi": {
+        "getScreenGroupList": "/api/v1/host/screen/group/device/list"
+    },
+    "OTARecord": "/api/v1/otaUpgradeRecord/list"
 }
