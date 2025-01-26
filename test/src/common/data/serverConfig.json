@@ -1,0 +1,13 @@
+{
+    "protocal": {
+        "http": "http",
+        "https": "https"
+    },
+    "host": {
+        "test_cn": "139.224.192.36",
+        "test_us": "18.215.241.226",
+        "release_cn": "cloud-service.austinelec.com",
+        "release_us": "cloud-service-us.austinelec.com"
+    },
+    "port": 8082
+}

@@ -1,31 +1,32 @@
 {
     "compilerOptions": {
+        "module": "ESNext",      // 使用 ES6 模块
+        "target": "ES2022",   
         "moduleResolution": "node",
-        "module": "ESNext",
-        "target": "es2022",
-        "lib": [
-            "es2022",
-            "dom"
-        ],
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "strict": true,
+        "outDir": "./dist",
         "types": [
             "node",
-            "@wdio/globals/types",
+            "@wdio/globals",
             "expect-webdriverio",
             "@wdio/mocha-framework"
         ],
         "skipLibCheck": true,
         "noEmit": true,
         "allowImportingTsExtensions": true,
-        "resolveJsonModule": true,
         "isolatedModules": true,
-        "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "allowSyntheticDefaultImports": true
     },
     "include": [
-        "test",
-        "wdio.conf.ts"
+        "test/**/*"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }

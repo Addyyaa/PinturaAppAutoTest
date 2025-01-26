@@ -1,8 +1,8 @@
-2025-01-23T09:11:09.575Z INFO @wdio/local-runner: Run worker command: run
-2025-01-23T09:11:10.084Z INFO webdriver: Initiate new session using the WebDriver protocol
-2025-01-23T09:11:10.084Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:11547/
-2025-01-23T09:11:10.092Z INFO webdriver: [POST] http://127.0.0.1:11547/session
-2025-01-23T09:11:10.092Z INFO webdriver: DATA {
+2025-01-26T03:44:00.590Z INFO @wdio/local-runner: Run worker command: run
+2025-01-26T03:44:01.162Z INFO webdriver: Initiate new session using the WebDriver protocol
+2025-01-26T03:44:01.162Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:1483/
+2025-01-26T03:44:01.172Z INFO webdriver: [POST] http://127.0.0.1:1483/session
+2025-01-26T03:44:01.172Z INFO webdriver: DATA {
   capabilities: {
     alwaysMatch: {
       platformName: 'Android',
@@ -15,7 +15,7 @@
     firstMatch: [ {} ]
   }
 }
-2025-01-23T09:11:14.555Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
+2025-01-26T03:44:05.885Z ERROR @wdio/utils:shim: TypeError: Cannot read properties of undefined (reading 'browserName')
     at getInstanceData (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\utils.js:43:37)
     at WdioImageComparisonService.addCommandsToBrowser (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:66:53)
     at WdioImageComparisonService.before (F:\autoTest\PinturaApp\node_modules\wdio-image-comparison-service\build\service.js:51:14)
@@ -26,6 +26,6 @@
     at executeHooksWithArgs (F:\autoTest\PinturaApp\node_modules\@wdio\utils\build\index.js:853:31)
     at Runner.run (file:///F:/autoTest/PinturaApp/node_modules/@wdio/runner/build/index.js:698:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-23T09:11:32.286Z INFO webdriver: COMMAND deleteSession()
-2025-01-23T09:11:32.287Z INFO webdriver: [DELETE] http://127.0.0.1:11547/session/2447c759-b824-4458-83e2-031a770725e1
-2025-01-23T09:11:32.563Z INFO webdriver: RESULT null
+2025-01-26T03:44:20.742Z INFO webdriver: COMMAND deleteSession()
+2025-01-26T03:44:20.743Z INFO webdriver: [DELETE] http://127.0.0.1:1483/session/a102df37-7ccc-4b86-b0ad-9fc4ff408c9a
+2025-01-26T03:44:21.015Z INFO webdriver: RESULT null

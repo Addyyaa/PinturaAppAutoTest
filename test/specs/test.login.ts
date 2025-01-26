@@ -2,10 +2,12 @@ import LoginPage from '../../pages/login.page';
 import HomePage from '../../pages/home.page';
 import MyProfilePage from '../../pages/myProfile.page';
 import NativePage from '../../pages/native.page';
-import * as testData from '../data/test-data.json' assert { type: 'json' };
-import * as serverConfig from '../data/serverConfig.json' assert { type: 'json' };
-import * as apiConfig from '../data/api.json' assert { type: 'json' };
+import * as testData from '../data/test-data.json';
+import * as serverConfig from '../data/serverConfig.json';
+import * as apiConfig from '../data/api.json';
+import { generateScreenInfo } from '../src/common/common';
 import WebSocketClient from '../script/wsClient';
+import { expect } from '@wdio/globals';
 
 
 describe('登录模块测试', () => {
@@ -230,60 +232,13 @@ describe('登录模块测试', () => {
         
     })
 
-    describe('上传图片', () => {
-        console.log("执行上传图片流程")
-        let groupDatas: JSON;
-        let screenInfo: Array<JSON>;
+    describe('上传图片', () => {;
         it.only('上传图片', async () => {
-            console.log("执行上传图片流程2")
             const data = await wsClient.waitForNextMessage(100000)
             const token = data.data['X-TOKEN']
-            // 获取屏幕组列表
-            const url = `${serverConfig.protocal.http}://${serverConfig.host.test_cn}:${serverConfig.port}${apiConfig.screenGroupApi.getScreenGroupList}`
-            const response = await fetch(url, {
-             method: 'GET',
-             headers: {
-                 'X-TOKEN': token
-             }
-            })
-            const responseData = await response.json()
-            if (response.status === 200) {
-                 if (responseData.code === 20) {
-                     const groupData = responseData.data.group
-                     groupDatas = groupData
-                     console.log("groupData======>",groupData)
-                 } else {
-                     console.log("未能获取到屏幕组列表")
-                     expect(true).toBe(false)
-                 }
-            } else {
-                 console.log("未能获取到屏幕组列表")
-                 expect(true).toBe(false)
-            }
-            const url2 = `${serverConfig.protocal.http}://${serverConfig.host.test_cn}:${serverConfig.port}${apiConfig.OTARecord}`
-            const screenIn = await fetch(url2, {
-                method: "GET",
-                headers: {
-                    'X-TOKEN': token
-                }
-            })
-            const screenDetail = await screenIn.json()
-            if (screenIn.status === 200) {
-                if (screenDetail.code === 20) {
-                    screenInfo = screenDetail.data
-                } else {
-                    console.log("未能获取到屏幕信息1")
-                    expect(true).toBe(false)
-                }
-            } else {
-                console.log("未能获取到屏幕信息2")
-                expect(true).toBe(false)
-            }
-            // screenInfo?.map(item => {
-            //     return { id: item.id, name: item.name,  }
-            // });
-            console.log("screenInfo======>",screenInfo)
-            console.log("groupDatas======>",groupDatas)
+            const screenInfo = await generateScreenInfo(token)
+            console.log('screenInfo======>',screenInfo)
+            
          })
     })
 

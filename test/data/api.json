@@ -1,6 +1,7 @@
 {
     "screenApi": {
-        "getScreenPics64": "/api/v1/screenPicture/page/list"
+        "getScreenPics64": "/api/v1/screenPicture/page/list",
+        "getScreenStorage": "/api/v1/screenVideo/extend"
     },
     "screenGroupApi": {
         "getScreenGroupList": "/api/v1/host/screen/group/device/list"

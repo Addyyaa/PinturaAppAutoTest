@@ -25,3 +25,9 @@ def request(flow: http.HTTPFlow) -> None:
             print(f"screenId:{data["screenId"]}")
 
         ws.send(json.dumps(data))
+
+def response(flow: http.HTTPFlow) -> None:
+    if "/device/list" in flow.request.path:
+        data["groupResponse"] = flow.response.json()["data"]["group"]
+        print(f"group:{data}")
+        ws.send(json.dumps(data))
